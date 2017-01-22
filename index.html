@@ -3,23 +3,42 @@
 <head>
   <meta charset="utf-8">
   <title>家賃計算</title>
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/style.css">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
+  <script src="js/jquery-1.12.4.min.js"></script>
 </head>
-<body
-
+<body>
 <header class="header">
   <div class="header_inner">
     <h1 class="site_title">家賃計算</h1>
   </div>
 </header>
-
 <section class="main_contents">
-
+  <div class="lead">
+    <h2>説明</h2>
+    <p>家賃(管理費等込み)と敷金礼金を足した金額が2年(24ヶ月)住む際には実際いくらかかるかを計算します</p>
+  </div>
+  <div class="price_box">
+    <p>家賃</p>
+    <span>=</span><input type="text" v-model.number="houseRent">
+  </div>
+  <div class="price_box">
+    <p>管理費等</p>
+    <span>=</span><input type="text" v-model.number="controlCost">
+  </div>
+  <div class="price_box">
+    <p>敷金・礼金</p>
+    <span>=</span><input type="text" v-model.number="deposit">
+  </div>
+  <div class="price_box calc_box">
+    <p>実質家賃</p>
+    <span>=</span><input type="number" v-model.number="splitRent" disabled>
+  </div>
 </section>
-
-<footer class="footer"></footer>
-
+<footer class="footer">
+  <p><small>Copyright © 2017 moyashi's blog. All Rights Reserved.</small></p>
+</footer>
 <script src="js/common.js"></script>
 </body>
 </html>

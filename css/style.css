@@ -4,6 +4,8 @@
 * {
   margin: 0;
   padding: 0;
+  line-height: 1.0;
+  box-sizing: border-box;
 }
 body {
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
@@ -18,5 +20,109 @@ ul,li {
 }
 
 /* =========================
-  common
+  header,footer
 =========================*/
+.header,
+.footer {
+  padding: 20px;
+  background-color: #005183;
+}
+h1,
+.footer p {
+  color: #fff;
+}
+.header_inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.footer p {
+  text-align: center;
+}
+@media only screen and (max-width: 734px) {
+
+}
+
+/* =========================
+  contents
+=========================*/
+.main_contents {
+  width: 100%;
+  max-width: 630px;
+  margin: 40px auto;
+}
+.lead h2 {
+  font-size: 32px;
+}
+.lead p {
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.price_box {
+  margin-top: 24px;
+  padding: 32px;
+  overflow: hidden;
+}
+.calc_box {
+  background-color: #e0e0e0;
+}
+.price_box + .price_box {
+  margin-top: 8px;
+}
+.price_box input,
+.price_box p {
+  display: inline-block;
+  font-size: 32px;
+}
+.price_box p {
+  width: 160px;
+}
+.price_box input {
+  width: 160px;
+  margin-left: 134px;
+  padding: 4px 16px;
+  text-align: right;
+}
+.price_box span {
+  font-size: 40px;
+  margin-left: 80px;
+}
+
+@media only screen and (max-width: 734px) {
+  .main_contents {
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .lead {
+    padding: 0 20px;
+  }
+  .lead h2 {
+    font-size: 24px;
+  }
+  .lead p {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+  .price_box {
+    padding: 24px 20px;
+  }
+  .price_box + .price_box {
+    margin-top: 0;
+  }
+  .price_box p {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .price_box input {
+    width: 80%;
+    margin-top: 16px;
+    margin-left: 10%;
+    border: 1px solid #333;
+  }
+  .price_box span {
+    margin-left: 0;
+  }
+}
